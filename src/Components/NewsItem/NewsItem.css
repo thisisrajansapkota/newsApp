@@ -1,0 +1,72 @@
+/* NewsItem.css */
+
+/* Styling the NewsItem cards */
+.news-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+max-width: 20rem;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.news-card img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 15rem;
+}
+
+.news-card .card-body {
+  height: auto;
+  background: #f8f9fa;
+}
+
+.news-card .card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #343a40;
+  margin-bottom: 15px;
+}
+
+.news-card .card-text {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+.news-card a {
+  text-decoration: none;
+}
+
+.news-card button {
+  background: #007bff;
+  border: none;
+  color: #fff;
+  transition: background 0.2s ease;
+}
+
+.news-card button:hover {
+  background: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .news-card {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .news-card .card-title {
+    font-size: 1rem;
+  }
+
+  .news-card .card-text {
+    font-size: 0.875rem;
+  }
+}
