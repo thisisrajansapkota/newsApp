@@ -3,6 +3,10 @@ import { Button, Card } from "react-bootstrap";
 import "./NewsItem.css";
 
 function NewsItem({ title, description, src, url }) {
+    if (!title || !url) {
+      return null; // Don't render if title or URL is missing
+    }
+
   return (
     <div className="col-md-6 col-lg-4 mb-4 p-3 d-inline-block my-3 mx-3" style={{maxWidth: "345px", overflow: "hidden"}}>
       <Card className="news-card h-100">
@@ -27,14 +31,25 @@ function NewsItem({ title, description, src, url }) {
               ? description.slice(0, 90)
               : "This news is trending today. If you would like to know more, you can view more. The news could likely be removed."}
           </Card.Text>
+          
           <a
             href={url}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-auto"
           >
-            <Button variant="primary">View More</Button>
+                <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-auto"
+          >
+            <div className="col-6 mx-auto">
+            <Button variant="primary" >View More</Button>
+            </div>
           </a>
+          </a>
+
         </Card.Body>
       </Card>
     </div>

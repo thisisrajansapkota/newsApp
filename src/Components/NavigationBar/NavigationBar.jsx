@@ -3,14 +3,22 @@ import { Link } from "react-router-dom";
 import "./NavigationBar.css";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHome
+} from "@fortawesome/free-solid-svg-icons";
+
+
 const NavigationBar = ({ setCategory }) => {
   return (
     <Navbar bg="primary" variant="dark" expand="lg">
-      <Container>
-        <Navbar.Brand href="/">Navbar</Navbar.Brand>
+      <Container className="d-flex">
+        <Navbar.Brand href="/">
+          <FontAwesomeIcon icon={faHome} size="2x"  color="#fff" />
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="ms-auto fs-5 gap-3">
             <Link
               to="/technology"
               className="nav-link"

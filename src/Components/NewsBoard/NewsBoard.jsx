@@ -15,12 +15,14 @@ function NewsBoard({category}) {
   }, [category]);
 
   return (
-    <div className="d-flex" >
-      <h2 className="">
-        Latest
-        <span className=""> News</span>
+    <div className="d-block m-3">
+      <h2 className="d-flex justify-content-center">
+        Latest &nbsp;
+        <span className="">
+          {category === "general" ? " News" : `${category}`}{" "}
+        </span>
       </h2>
-      <div className="d-flex">
+      <div className="d-flex justify-content-center overflow-hidden flex-wrap">
         {articles.map((news, index) => {
           return (
             <NewsItem
@@ -34,10 +36,7 @@ function NewsBoard({category}) {
         })}
       </div>
 
-
-
-
-     {/* final div closes below */}
+      {/* final div closes below */}
     </div>
   );
 }

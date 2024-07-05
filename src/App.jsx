@@ -11,7 +11,6 @@ function App() {
   return (
     <>
       <NavigationBar setCategory= {setCategory} />
-      {/* <h1>2538</h1> */}
       <NewsBoard  category= {category} />
       <NewsItem />
     </>
